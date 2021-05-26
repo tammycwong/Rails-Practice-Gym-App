@@ -1,0 +1,12 @@
+<h1> Client Info</h1>
+<h3>Name: <%= @client.name %></h3>
+<h3>Age: <%= @client.age %></h3>
+<h3>Gyms: 
+<ul>
+<% @client.gyms.each do |gym| %>
+    <li><%= gym.name %></li>
+    <% end %>
+    </ul>
+</h3>
+
+<button><%= link_to "back", clients_path %></button>
